@@ -52,7 +52,7 @@ import vTextField from './vTextField.vue'
 
 import { validationMixin } from 'vuelidate'
 
-const ValidName = (val) => /^[a-zа-яёА-Я\s\-]+$/.test(val)
+const ValidName = (val) => /^[a-zA-Zа-яёА-Я\s\-]+$/.test(val)
 const ValidPhone = (val) => /^\+[0-9\+\-\(\)]{11,11}$/.test(val)
 
 
@@ -101,6 +101,7 @@ export default {
   methods: {
     submit() {
       console.log(this.form)
+      alert("Form send")
     //   this.$v.form.$touch()
     }
   }
